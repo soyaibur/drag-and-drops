@@ -3,13 +3,16 @@
 
 
 
-// .....All Element Selection will be undernith here...........
+// .....All Element Selection will be undernith here.......
+const draggables = document.querySelectorAll('.draggable')
+const containers = document.querySelectorAll('.container')
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 
 // .....All EventListener go undernith here...........
-// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+// :::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 
@@ -22,7 +25,10 @@ function printOut(text){
     div.innerHTML = text
     document.body.appendChild(div)
 }
-// addEventListener('click',()=>{
-//     alert("this is working")
+// containers.forEach(draggable =>{
+//     draggable.addEventListener('click',()=>{
+//         alert("this is working")
+//     })
 // })
+
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
