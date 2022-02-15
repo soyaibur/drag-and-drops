@@ -12,21 +12,26 @@ const containers = document.querySelectorAll('.container')
 
 // .....All EventListener go undernith here...........
 draggables.forEach(draggable=>{
+    
     draggable.addEventListener("dragstart",()=>{
         draggable.classList.add('dragging')
     })
     draggable.addEventListener("dragend",()=>{
      draggable.classList.remove('dragging')
     })
+
 })
 
 for(let container of containers){
+
     container.addEventListener("dragover",(e)=>{
         e.preventDefault()
         const draggable = document.querySelector('.dragging')
         container.appendChild(draggable)
     })
 }
+
+
 // :::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
@@ -47,3 +52,23 @@ function printOut(text){
 // })
 
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+// const draggables = document.querySelectorAll('.draggable')
+// const containers = document.querySelectorAll('.container')
+
+// draggables.forEach(draggable => {
+//     draggable.addEventListener('dragstart',()=>{
+//         draggable.classList.add('dragging')
+//     })
+//     draggable.addEventListener('dragend',()=>{
+//         draggable.classList.remove('dragging')
+//     })
+// });
+
+// containers.forEach(container =>{
+//     container.addEventListener('dragover',(e)=>{
+//         e.preventDefault()
+//         const draggable = document.querySelector('.dragging')
+//         container.appendChild(draggable)
+//     })
+// })
