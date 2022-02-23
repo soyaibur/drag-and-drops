@@ -30,9 +30,14 @@ for(let container of containers){
     container.addEventListener("dragover",(e)=>{
         e.preventDefault()
         const afterElement = getDragAfterElement(container, e.clientY)
-        console.log(afterElement)
         const draggable = document.querySelector('.dragging')
-        container.appendChild(draggable)
+
+        if( afterElement == null) {
+            container.appendChild(draggable)
+        } else{
+          container.insertBefore(draggable, afterElement)
+        }
+
     })
     }
 
